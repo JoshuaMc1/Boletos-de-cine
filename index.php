@@ -29,25 +29,25 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6 col-12 mb-3">
                                     <label class="form-label"><strong>Primer nombre:</strong></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" id="nombre1" name="nombre1">
                                 </div>
                                 <div class="col-lg-3 col-sm-6 col-12 mb-3">
                                     <label class="form-label"><strong>Segundo nombre:</strong></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" id="nombre2" name="nombre2">
                                 </div>
                                 <div class="col-lg-6 col-sm-12 col-12 mb-3">
                                     <label class="form-label"><strong>Apellidos:</strong></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" id="apellido" name="apellido">
                                 </div>
                                 <div class="col-lg-12 mb-3">
                                     <label class="form-label"><strong>Numero de identidad:</strong></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" id="identidad" name="identidad">
                                 </div>
                                 <div class="col-lg-8 col-12 mb-3">
                                     <label class="form-label"><strong>Seleccione la pelicula que desea <small class="text-danger">(maximo 2)</small>:</strong></label>
                                     <div class="container-fluid px-1">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                            <input class="form-check-input" type="checkbox" id="" value="option1">
                                             <label class="form-check-label" for="inlineCheckbox1">Terminator</label>
                                         </div>
                                         <div class="form-check form-check-inline">
