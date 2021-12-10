@@ -21,14 +21,31 @@ function validar(){
                 return false;
             }else{
                 if($("#identidad").val() == ""){
+                    $(".btnClose").click();
                     alerta("Debe ingresar su numero de identidad", "danger");
                     return false;
                 }else{
                     if($("#silla").val() == ""){
+                        $(".btnClose").click();
                         alerta("Dede seleccionar una silla","danger");
                         return false;
                     }else{
-                        
+                        $(".btnClose").click();
+                        var suma = 0;
+                        var los_cboxes = document.getElementsByName('opc[]');
+                        for (var i = 0, j = los_cboxes.length; i < j; i++) {
+                            if (los_cboxes[i].checked == true) {
+                                suma++;
+                                }
+                            }
+
+                        if (suma < 1 || suma > 2) {
+                            alerta("Debe seleccionar una pelicula o dos","danger");
+                            return false;
+                        } else {
+                            $(".btnClose").click();
+                            return true;
+                        }
                     }
                 }
             }
