@@ -19,7 +19,7 @@
             <div class="container-fluid bg-dark text-white p-3 p-lg-5 rounded shadow">
                 <div class="row">
                     <div class="col-lg-12">
-                        <form action="#">
+                        <form action="#" onsubmit="return validar()">
                             <div class="row">
                                 <div class="col-12 col-lg-12 col-sm-12 text-center py-2 mb-3">
                                     <h2 class="animated-shadow">Venta de ticket</h2>
@@ -47,34 +47,34 @@
                                     <label class="form-label"><strong>Seleccione la pelicula que desea <small class="text-danger">(maximo 2)</small>:</strong></label>
                                     <div class="container-fluid px-1">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="" value="option1">
+                                            <input class="form-check-input" type="checkbox" name="opc[]" value="Terminator">
                                             <label class="form-check-label" for="inlineCheckbox1">Terminator</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                            <input class="form-check-input" type="checkbox" name="opc[]" value="Black Widow">
                                             <label class="form-check-label" for="inlineCheckbox1">Black Widow</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                            <input class="form-check-input" type="checkbox" name="opc[]" value="Black Panter">
                                             <label class="form-check-label" for="inlineCheckbox1">Black Panter</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                            <input class="form-check-input" type="checkbox" name="opc[]" value="Avengers">
                                             <label class="form-check-label" for="inlineCheckbox1">Avengers</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                            <input class="form-check-input" type="checkbox" name="opc[]" value="John Wick 3">
                                             <label class="form-check-label" for="inlineCheckbox1">John Wick 3</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                            <input class="form-check-input" type="checkbox" name="opc[]" value="Venom">
                                             <label class="form-check-label" for="inlineCheckbox1">Venom</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-12 mb-3">
                                     <label class="form-label"><strong>Seleccione la silla que desea reservar:</strong></label>
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select class="form-select" aria-label="Default select example" name="silla" id="silla">
                                         <option value="" selected>Seleccione una opción</option>
                                         <?php
                                         for ($i = 0; $i < 20; $i++) {

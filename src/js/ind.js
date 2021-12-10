@@ -6,7 +6,34 @@ $(document).ready(function () {
 });
 
 function validar(){
-    
+    if($("#nombre1").val() == ""){
+        alerta("Debe ingresar su primer nombre","danger");
+        return false;
+    }else{
+        if($("#nombre2").val() == ""){
+            $(".btnClose").click();
+            alerta("Debe ingresar su segundo nombre","danger");
+            return false;
+        }else{
+            if($("#apellido").val() == ""){
+                $(".btnClose").click();
+                alerta("Debe ingresar su apellido","danger");
+                return false;
+            }else{
+                if($("#identidad").val() == ""){
+                    alerta("Debe ingresar su numero de identidad", "danger");
+                    return false;
+                }else{
+                    if($("#silla").val() == ""){
+                        alerta("Dede seleccionar una silla","danger");
+                        return false;
+                    }else{
+                        
+                    }
+                }
+            }
+        }
+    }
 }
 
 function inhabilitar(){
