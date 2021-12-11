@@ -19,7 +19,7 @@
             <div class="container-fluid bg-dark text-white p-3 p-lg-5 rounded shadow">
                 <div class="row">
                     <div class="col-lg-12">
-                        <form action="#" onsubmit="return validar()">
+                        <form action="src/php/modulo/guardar.php" method="POST" onsubmit="return validar()">
                             <div class="row">
                                 <div class="col-12 col-lg-12 col-sm-12 text-center py-2 mb-3">
                                     <h2 class="animated-shadow">Venta de ticket</h2>
@@ -41,7 +41,7 @@
                                 </div>
                                 <div class="col-lg-12 mb-3">
                                     <label class="form-label"><strong>Numero de identidad:</strong></label>
-                                    <input type="text" class="form-control" id="identidad" name="identidad">
+                                    <input type="text" class="form-control" id="identidad" name="identidad" onkeypress="return validarIdentidad(event)">
                                 </div>
                                 <div class="col-lg-8 col-12 mb-3">
                                     <label class="form-label"><strong>Seleccione la pelicula que desea <small class="text-danger">(maximo 2)</small>:</strong></label>
@@ -120,9 +120,9 @@
                             <tbody>
                                 <?php 
                                     require("src/php/connection.php");
-                                    $resultado = mysqli_query($conection, "SELECT c.*, des.* FROM compras c INNER JOIN desc_compra des ON c.desc_compra=des.id_desc");
+                                    $resultado = mysqli_query($conection, "SELECT * FROM compras");
                                     while($datos = mysqli_fetch_array($resultado)){
-                                        $concat = $datos['pelicula'].', '.$datos['pelicula2'];
+                                        $concat = $datos['pel1'].', '.$datos['pel2'];
                                         print '
                                             <tr>
                                                 <td class="table-info">'.$datos["id_ticket"].'</td>

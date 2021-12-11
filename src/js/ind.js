@@ -1,4 +1,5 @@
 var alertPlaceholder = document.getElementById('msgNotificacion')
+var cont = 1;
 
 $(document).ready(function () { 
     inhabilitar();
@@ -53,10 +54,34 @@ function validar(){
     }
 }
 
+function validarIdentidad(e) {
+    var esc = e.keyCode || e.wich;
+    var entrada = String.fromCharCode(esc);
+    
+    var validos = "0123456789";
+    teclas = "8-37-38-46";
+    var t_especial = false;
+
+    if(cont > 13){
+        return false;
+    }else{
+        for (var i in teclas) {
+            if (esc == validos[i]) {
+                t_especial = true;
+            }
+        }
+        if (validos.indexOf(entrada) == -1 && !t_especial) {
+            return false;
+        }
+        cont++;
+    }
+    
+}
+
 function inhabilitar(){
-    $("#precio").prop('disabled', true);
-    $("#impuesto").prop('disabled', true);
-    $("#total").prop('disabled', true);
+    $("#precio").prop('readonly', true);
+    $("#impuesto").prop('readonly', true);
+    $("#total").prop('readonly', true);
 }
 
 function calcular(){
